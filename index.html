@@ -1,49 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veggie Store</title>
+    <title>Veggie Store - Reciprocity</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
     <header>
-        <h1>Welcome to Veggie Store 🥦🍅</h1>
+        <h1>Veggie Store - Reciprocity</h1>
+        <p>Fresh & Affordable Veggies</p>
+        <p>Located next to Masete Supermarket | Contact: 0793174086</p>
     </header>
 
-    <main>
-        <div class="products">
-            <!-- Tomatoes Product -->
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1582515073490-dc7c367199d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60" alt="Tomatoes">
-                <h2>Tomatoes</h2>
-                <p>R20 per kg</p>
-                <a href="https://wa.me/27718452020" class="button">Order Now</a>
-            </div>
-
-            <!-- Onions Product -->
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1606755962774-04f1c9468e1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60" alt="Onions">
-                <h2>Onions</h2>
-                <p>R15 per kg</p> <!-- Updated price for onions -->
-                <a href="https://wa.me/27718452020" class="button">Order Now</a>
-            </div>
-
-            <!-- Achar Product -->
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1600274665980-2e06ff9bc67c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60" alt="Achar">
-                <h2>Achar</h2>
-                <p>R35 for a 500g jar</p> <!-- Adjust price for achar -->
-                <a href="https://wa.me/27718452020" class="button">Order Now</a>
-            </div>
+    <section class="products">
+        <div class="product">
+            <img src="onion.jpg" alt="Onion">
+            <h2>Onion</h2>
+            <p>R15 per kg</p>
+            <button class="add-to-cart" data-name="Onion" data-price="15">Add to Cart</button>
         </div>
-    </main>
+
+        <div class="product">
+            <img src="achar.jpg" alt="Achar">
+            <h2>Achar (Various Sizes)</h2>
+            <p>Starting from R45</p>
+            <button class="add-to-cart" data-name="Achar" data-price="45">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="tomato.jpg" alt="Tomato">
+            <h2>Tomato</h2>
+            <p>R20 per kg</p>
+            <button class="add-to-cart" data-name="Tomato" data-price="20">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="potato.jpg" alt="Potato">
+            <h2>Potato</h2>
+            <p>R25 per pocket (7kg)</p>
+            <button class="add-to-cart" data-name="Potato" data-price="25">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="cabbage.jpg" alt="Cabbage">
+            <h2>Cabbage</h2>
+            <p>R18 each</p>
+            <button class="add-to-cart" data-name="Cabbage" data-price="18">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="carrot.jpg" alt="Carrot">
+            <h2>Carrot</h2>
+            <p>R20 per kg</p>
+            <button class="add-to-cart" data-name="Carrot" data-price="20">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="greenpepper.jpg" alt="Green Pepper">
+            <h2>Green Pepper</h2>
+            <p>R22 per pack</p>
+            <button class="add-to-cart" data-name="Green Pepper" data-price="22">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="spinach.jpg" alt="Spinach">
+            <h2>Spinach</h2>
+            <p>R15 per bunch</p>
+            <button class="add-to-cart" data-name="Spinach" data-price="15">Add to Cart</button>
+        </div>
+    </section>
+
+    <section class="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: R<span id="total-price">0</span></p>
+        <button id="checkout-btn">Proceed to Checkout</button>
+    </section>
+
+    <section class="checkout" style="display: none;">
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+            <label for="location">Your Location (Optional)</label>
+            <input type="text" id="location" name="location" placeholder="Example: Near Masete Supermarket">
+            <button type="submit">Confirm Purchase</button>
+        </form>
+    </section>
 
     <footer>
-        <p>&copy; 2025 Veggie Store. All rights reserved.</p>
-        <p>Website made by <strong>MR TJ MAILULA</strong>.</p>
+        <p>Made by Mr. TJ Mailula © 2025</p>
     </footer>
 
+    <script src="app.js"></script>
 </body>
+
 </html>
+
+
+
+
